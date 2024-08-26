@@ -362,6 +362,8 @@
 -analyzer:"D:/Unity/2022.3.7f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/AnimationManager.cs"
 "Assets/Scripts/InputManager.cs"
+"Assets/Scripts/PlatformManager.cs"
+"Assets/Scripts/PlatformSettings.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/PlayerLocomotion.cs"
 "Assets/Scripts/PlayerManager.cs"
