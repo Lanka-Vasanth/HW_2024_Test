@@ -17,7 +17,7 @@ public class CamFollow : MonoBehaviour
             Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
             transform.position = smoothedPosition;
             
-            transform.rotation = Quaternion.Euler(22f, 0f, 0f);
+            transform.rotation = Quaternion.Euler(30f, 0f, 0f);
         }
     }
 }

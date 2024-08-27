@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 
 public class PlatformManager : MonoBehaviour
@@ -79,6 +81,6 @@ public class PlatformManager : MonoBehaviour
     
     void GameOver()
     {
-        Debug.Log("Game Over!");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 }
