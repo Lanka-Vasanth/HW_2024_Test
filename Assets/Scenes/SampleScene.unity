@@ -563,7 +563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformPrefab: {fileID: 2535683756728814736, guid: 1a98236878253ed48b13a9e00fd6ebca, type: 3}
   platformSize: 9
-  disappearTime: 4
+  disappearTime: 5
   newSpawnTime: 2.5
   scoreText: {fileID: 696920068}
 --- !u!4 &1049594821
