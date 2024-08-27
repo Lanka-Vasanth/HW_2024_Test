@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PlatformManager : MonoBehaviour
 {
@@ -8,13 +10,16 @@ public class PlatformManager : MonoBehaviour
     public float platformSize=9f;
     public float disappearTime=5f;
     public float newSpawnTime=2.5f;
+    public Text scoreText;
 
     private GameObject currPlatform;
     private GameObject nextPlatform;
     private Vector3 lastDirection;
-
+    private int score=0;
 
     void Start(){
+        score=0;
+        UpdateScoreUI();
         SpawnInitialPlatform();
     }
 
@@ -42,6 +47,7 @@ public class PlatformManager : MonoBehaviour
         {
             Destroy(currPlatform);
             currPlatform = nextPlatform;
+            IncreaseScore();
             Invoke("SpawnNewPlatform", newSpawnTime);
         }
     }
@@ -58,6 +64,17 @@ public class PlatformManager : MonoBehaviour
         Vector3 newPosition = currPlatform.transform.position + randomDirection;    
 
         return newPosition;
+    }
+    
+    void IncreaseScore()
+    {
+        score++;
+        UpdateScoreUI();
+    }
+
+    void UpdateScoreUI()
+    {
+        scoreText.text = "Score: " + score.ToString();
     }
     
     void GameOver()
